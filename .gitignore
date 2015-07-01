@@ -1,3 +1,11 @@
+SendAnywhereSDK/SendAnywhereSDK.xcodeproj/*.pbxuser
+SendAnywhereSDK/SendAnywhereSDK.xcodeproj/xcuserdata*
+SendAnywhereSDKExample/SendAnywhereSDKExample.xcodeproj/*.pbxuser
+SendAnywhereSDKExample/SendAnywhereSDKExample.xcodeproj/xcuserdata*
+
+xcuserdata
+.DS_Store
+
 # Xcode
 #
 build/

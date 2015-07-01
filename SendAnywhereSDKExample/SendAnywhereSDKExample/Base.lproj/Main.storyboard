@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please press the send button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2eQ-gE-BYq">
+                                <rect key="frame" x="16" y="100" width="469" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QFf-Br-xD3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXk-6l-5OI">
+                                <rect key="frame" x="493" y="96" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="5dW-zS-p3G"/>
+                                    <constraint firstAttribute="height" constant="30" id="bUZ-ng-fQR"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sQE-kD-Red"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2g8-GY-wVe" userLabel="SendProgressView">
+                                <rect key="frame" x="16" y="146" width="568" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9J-Oy-uEW" userLabel="SendFileName">
+                                <rect key="frame" x="16" y="148" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pnl-NA-Sa9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert receive key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iac-Ji-vnU">
+                                <rect key="frame" x="16" y="228" width="469" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BPF-Ym-CgP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Do-uO-9eY">
+                                <rect key="frame" x="493" y="228" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="Ojx-c7-6BQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="ppn-gh-ZRg"/>
+                                </constraints>
+                                <state key="normal" title="Receive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onReceive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmh-CT-Yfn"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="29r-aP-HAZ" userLabel="ReceiveProgressView">
+                                <rect key="frame" x="16" y="283" width="568" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rO-bb-ulT" userLabel="ReceiveFileName">
+                                <rect key="frame" x="16" y="285" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LpP-y3-mTc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w9J-Oy-uEW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Xh-2l-eq0"/>
+                            <constraint firstItem="2g8-GY-wVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Ei-mg-OIx"/>
+                            <constraint firstItem="QXk-6l-5OI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4ng-QE-nQt"/>
+                            <constraint firstItem="29r-aP-HAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8aq-JS-eXq"/>
+                            <constraint firstItem="8rO-bb-ulT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9mV-w8-zLO"/>
+                            <constraint firstItem="8rO-bb-ulT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K5w-ED-FjG"/>
+                            <constraint firstItem="2g8-GY-wVe" firstAttribute="top" secondItem="QXk-6l-5OI" secondAttribute="bottom" constant="20" id="M2V-nV-Cnx"/>
+                            <constraint firstItem="QXk-6l-5OI" firstAttribute="leading" secondItem="2eQ-gE-BYq" secondAttribute="trailing" constant="8" id="MWq-Yh-83j"/>
+                            <constraint firstItem="8rO-bb-ulT" firstAttribute="top" secondItem="29r-aP-HAZ" secondAttribute="bottom" id="P9e-bM-g6s"/>
+                            <constraint firstItem="w9J-Oy-uEW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VzA-cW-xT8"/>
+                            <constraint firstItem="6Do-uO-9eY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XJx-Og-qGZ"/>
+                            <constraint firstItem="2g8-GY-wVe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YHT-Eo-mMI"/>
+                            <constraint firstItem="w9J-Oy-uEW" firstAttribute="top" secondItem="2g8-GY-wVe" secondAttribute="bottom" id="a8C-33-NfF"/>
+                            <constraint firstItem="6Do-uO-9eY" firstAttribute="leading" secondItem="Iac-Ji-vnU" secondAttribute="trailing" constant="8" id="aHy-U2-jla"/>
+                            <constraint firstItem="Iac-Ji-vnU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bi2-Tg-bwF"/>
+                            <constraint firstItem="QXk-6l-5OI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="c3j-pO-iuD"/>
+                            <constraint firstItem="2eQ-gE-BYq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="eqB-Qw-qdy"/>
+                            <constraint firstItem="6Do-uO-9eY" firstAttribute="top" secondItem="2g8-GY-wVe" secondAttribute="bottom" constant="80" id="iT8-k6-ARp"/>
+                            <constraint firstItem="29r-aP-HAZ" firstAttribute="top" secondItem="6Do-uO-9eY" secondAttribute="bottom" constant="25" id="iXt-0O-rse"/>
+                            <constraint firstItem="29r-aP-HAZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rVj-24-iTX"/>
+                            <constraint firstItem="Iac-Ji-vnU" firstAttribute="top" secondItem="2g8-GY-wVe" secondAttribute="bottom" constant="80" id="u6z-kT-iU2"/>
+                            <constraint firstItem="2eQ-gE-BYq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zLt-eV-Rl5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receiveFileNameLabel" destination="8rO-bb-ulT" id="U8d-r4-Jgi"/>
+                        <outlet property="receiveProgressView" destination="29r-aP-HAZ" id="1eF-mi-E2l"/>
+                        <outlet property="sendFileNameLabel" destination="w9J-Oy-uEW" id="pHy-gn-QvJ"/>
+                        <outlet property="sendKeyLabel" destination="2eQ-gE-BYq" id="YTY-JW-z42"/>
+                        <outlet property="sendProgressView" destination="2g8-GY-wVe" id="iWj-85-cfP"/>
+                        <outlet property="textField" destination="Iac-Ji-vnU" id="cs0-GZ-Gdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="308"/>
+        </scene>
+    </scenes>
+</document>

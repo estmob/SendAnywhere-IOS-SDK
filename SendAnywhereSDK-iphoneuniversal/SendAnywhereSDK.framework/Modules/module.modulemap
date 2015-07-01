@@ -1,0 +1,6 @@
+framework module SendAnywhereSDK {
+  umbrella header "SendAnywhereSDK.h"
+
+  export *
+  module * { export * }
+}
